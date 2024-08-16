@@ -24,44 +24,39 @@ cd surveyGenie_api
 3. Environment Variables
    You will need to set up environment variables for the application to function correctly. Create a .env file in the root directory of the project with the following content:
 
-- .env file
+   - SECRET_KEY="your-secret-key"
+   - PORT=3001
+   - Database URLs
 
-SECRET_KEY="your-secret-key"
-PORT=3001
+     - DATABASE_URL="postgresql://<username>:<password>@<host>:<port>/<database_name>"
+     - TEST_DATABASE_URL="postgresql://<username>:<password>@localhost:5432/survey_genie_test"
 
-- Database URLs
-
-DATABASE_URL="postgresql://<username>:<password>@<host>:<port>/<database_name>"
-TEST_DATABASE_URL="postgresql://<username>:<password>@localhost:5432/survey_genie_test"
-
-- Example:
-
-  - DATABASE_URL="postgresql://postgres:password@localhost:5432/survey_genie"
-
-- SECRET_KEY: A secret key used for cryptographic operations.
-- PORT: The port on which the API will run. Default is 3001.
-- DATABASE_URL: The connection string for your production database.
-- TEST_DATABASE_URL: The connection string for your test database.
+   - Example:
+     - DATABASE_URL="postgresql://postgres:password@localhost:5432/survey_genie"
+     - SECRET_KEY: A secret key used for cryptographic operations.
+     - PORT: The port on which the API will run. Default is 3001.
+     - DATABASE_URL: The connection string for your production database.
+     - TEST_DATABASE_URL: The connection string for your test database.
 
 4. Database Setup
    You’ll need to set up a PostgreSQL database for development and testing.
 
 Run the following commands in your terminal to create the required databases:
 
-createdb survey_genie
-createdb survey_genie_test
+`createdb survey_genie`
+`createdb survey_genie_test`
 
 5. Running the API
    To start the server in development mode, run:
 
-npm run dev
+`npm run dev`
 
 This will start the server on http://localhost:3001 (or the port you specified in the .env file).
 
 6. Running Tests
    To run the test suite, use the following command:
 
-npm test
+`npm test`
 
 This will use the TEST_DATABASE_URL to connect to your test database.
 
@@ -78,3 +73,7 @@ This file uses dotenv to load variables from the .env file and includes logging 
 8. Common Issues
    - Database Connection: Ensure your PostgreSQL server is running and accessible with the credentials provided in the .env file.
    - Environment Variables: Ensure all required environment variables are correctly set in your .env file.
+
+```
+
+```
