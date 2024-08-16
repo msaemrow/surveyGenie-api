@@ -1,11 +1,14 @@
-SurveyGenie API
-This is the backend API for the SurveyGenie application. Follow these steps to set up the project on your local machine.
+# SurveyGenie API
 
-Prerequisites
-Node.js (version 14 or later)
-PostgreSQL (version 12 or later)
-Git
-Setup Instructions
+### This is the backend API for the SurveyGenie application. Follow these steps to set up the project on your local machine.
+
+### Prerequisites
+
+- Node.js (version 14 or later)
+- PostgreSQL (version 12 or later)
+- Git
+
+### Setup Instructions
 
 1. Clone the Repository
    Start by cloning the repository to your local machine:
@@ -21,19 +24,19 @@ npm install
 3. Environment Variables
    You will need to set up environment variables for the application to function correctly. Create a .env file in the root directory of the project with the following content:
 
-# .env file
+- .env file
 
 SECRET_KEY="your-secret-key"
 PORT=3001
 
-# Database URLs
+- Database URLs
 
 DATABASE_URL="postgresql://<username>:<password>@<host>:<port>/<database_name>"
 TEST_DATABASE_URL="postgresql://<username>:<password>@localhost:5432/survey_genie_test"
 
-# Example:
+- Example:
 
-# DATABASE_URL="postgresql://postgres:password@localhost:5432/survey_genie"
+  - DATABASE_URL="postgresql://postgres:password@localhost:5432/survey_genie"
 
 - SECRET_KEY: A secret key used for cryptographic operations.
 - PORT: The port on which the API will run. Default is 3001.
