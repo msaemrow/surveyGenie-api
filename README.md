@@ -19,7 +19,7 @@ cd surveyGenie_api
 2. Install Dependencies
    Install the necessary dependencies using npm:
 
-npm install
+`npm install`
 
 3. Environment Variables
    You will need to set up environment variables for the application to function correctly. Create a .env file in the root directory of the project with the following content:
