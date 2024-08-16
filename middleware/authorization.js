@@ -44,7 +44,6 @@ function ensureLoggedIn(req, res, next) {
  */
 
 function ensureCorrectUser(req, res, next) {
-  console.log("ENSURE CORRECT USER ID", req.params.user_id);
   try {
     if (!res.locals.user) throw new UnauthorizedError();
     const user = res.locals.user;

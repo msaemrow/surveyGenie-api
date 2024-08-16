@@ -42,7 +42,6 @@ router.post("/complete", async (req, res, next) => {
       throw new BadRequestError(errs);
     }
     const completedSurvey = await Survey.completeSurvey(req.body);
-    console.log(req.body);
     return res.status(201).json({ completedSurvey });
   } catch (err) {
     console.error("Error completing survey:", err);

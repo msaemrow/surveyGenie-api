@@ -77,8 +77,6 @@ router.post("/", async function (req, res, next) {
  *  Returns { id, email, firstName, lastName, numSurveys }
  */
 router.patch("/:user_id", ensureCorrectUser, async (req, res, next) => {
-  console.log("CHECKING USER ID IN PATCH ROUTE: ", req.params.user_id);
-  console.log("CHECKING DATA IN PATCH ROUTE: ", req.body);
   try {
     const validator = jsonschema.validate(req.body, updateUserSchema);
     if (!validator.valid) {

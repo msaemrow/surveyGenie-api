@@ -113,7 +113,6 @@ class User {
     }
 
     const hashedPassword = await bcrypt.hash(password, BCRYPT_WORK_FACTOR);
-    console.log("Hashed password generated:", hashedPassword);
     try {
       const result = await db.query(
         `INSERT INTO users
@@ -127,7 +126,6 @@ class User {
         [email, first_name, last_name, hashedPassword, num_surveys]
       );
       const user = result.rows[0];
-      console.log("User registered successfully:", user);
       return user;
     } catch (err) {
       console.error("Error during user registration:", err);

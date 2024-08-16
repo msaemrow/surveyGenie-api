@@ -73,7 +73,3 @@ This file uses dotenv to load variables from the .env file and includes logging 
 8. Common Issues
    - Database Connection: Ensure your PostgreSQL server is running and accessible with the credentials provided in the .env file.
    - Environment Variables: Ensure all required environment variables are correctly set in your .env file.
-
-```
-
-```

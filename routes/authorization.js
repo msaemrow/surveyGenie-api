@@ -23,7 +23,6 @@ router.post("/token", async (req, res, next) => {
     const { email, password } = req.body;
     const user = await User.authenticateUser(email, password);
     const token = createToken(user);
-    console.log("token", token);
     return res.json({ token });
   } catch (err) {
     return next(err);
