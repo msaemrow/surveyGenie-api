@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "survey_id": {
+      "type": ["integer", "string"],
+      "description": "ID of the survey being completed"
+    },
+    "responses": {
+      "type": "object",
+      "patternProperties": {
+        "^[0-9]+$": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Object containing question IDs as keys and answers as values"
+    }
+  },
+  "required": ["survey_id", "responses"],
+  "additionalProperties": false
+}

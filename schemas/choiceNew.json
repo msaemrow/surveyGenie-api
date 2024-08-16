@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://our.company.com/choiceNew.schema.json",
+  "type": "object",
+  "properties": {
+    "choice_id": {
+      "type": ["integer", "string"]
+    },
+    "question_id": {
+      "type": "integer"
+    },
+    "choice_text": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": ["choice_text"],
+  "additionalProperties": false
+}

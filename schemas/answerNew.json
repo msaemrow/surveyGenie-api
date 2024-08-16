@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://our.company.com/answer.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "response_id": {
+      "type": "integer"
+    },
+    "question_id": {
+      "type": "integer"
+    },
+    "answer_text": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": ["response_id", "question_id", "answer_text"],
+  "additionalProperties": false
+}

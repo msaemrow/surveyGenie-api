@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://our.company.com/questionNew.schema.json",
+  "type": "object",
+  "properties": {
+    "question_id": {
+      "type": ["integer", "string"]
+    },
+    "question_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "survey_id": {
+      "type": "integer"
+    },
+    "question_type": {
+      "type": "string",
+      "enum": ["Text", "Yes or No", "Multiple Choice"]
+    },
+    "options": {
+      "type": "array",
+      "nullable": true
+    }
+  },
+  "required": ["question_text", "question_type"],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "question_type": { "const": "Multiple Choice" }
+        }
+      },
+      "then": {
+        "properties": {
+          "options": {
+            "type": "array",
+            "minItems": 1
+          }
+        },
+        "required": ["options"]
+      }
+    }
+  ],
+  "additionalProperties": false
+}
