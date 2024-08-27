@@ -17,12 +17,7 @@ function getDatabaseName() {
 
 const BCRYPT_WORK_FACTOR = process.env.NODE_ENV === "test" ? 1 : 12;
 
-console.log("SureyGenie Config:".green);
-console.log("SECRET_KEY:".yellow, SECRET_KEY);
-console.log("PORT:".yellow, PORT.toString());
-console.log("BCRYPT_WORK_FACTOR".yellow, BCRYPT_WORK_FACTOR.toString());
-console.log("Database:".yellow, getDatabaseName());
-console.log("---");
+console.log("SureyGenie Server Successful:".green);
 
 module.exports = {
   SECRET_KEY,
